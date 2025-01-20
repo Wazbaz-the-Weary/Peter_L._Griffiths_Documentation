@@ -5,5 +5,5 @@ The premise of this speculative binary programming language is to embed a textur
 - E: Emissivity (reflective to black-body), 
 - S: Specularity (specular/glossy reflection/transmission to diffuse/scattered reflection/transmission), 
 - T: Tropism (isotropic scattering to anisotropic scattering), and 
-- D: Depth (until transition to next material) (none/clear to infinite/black-body).
+- D: Depth (until transition to next material) (none/clear to opaque).
 
