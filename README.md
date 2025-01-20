@@ -1,10 +1,12 @@
-# RGBADEST, or Colorfuller
+# RGBADEST
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
-The premise of this speculative binary programming language is to embed rendered color/texture images with additional per-pixel physically-based lighting properties, expanding onto 4x8-bit RGBA color with DEST, an additional 4x8-bit bit spectral register: 
+The premise of this speculative binary programming language is to embed rendered color/texture images with additional per-pixel physically-based lighting properties, expanding onto 4x8-bit RGBA/CMYK color with DEST, an additional 4x8-bit spectral register: 
 - D: Depth (of material until transition to next material) (none/clear to opaque),
 - E: Emissivity (reflective to black-body), 
 - S: Specularity (specular/glossy reflection/transmission to diffuse/scattered reflection/transmission), and
 - T: Tropism (isotropic scattering to anisotropic scattering). 
 
-Recognizing how uneccessarily complex a 64-bit SDR
+  *NB: These material properties are typically mapped in layers onto 3D meshes following the Pixar openUSD or Khronos glTF PBR pipelines; expanding color space to include some of these features has been fun to think about, but is a real challenge to represent.*
+
+Recognizing how complex a 64-bit, 18,446,744,000,000,000,000 (18.446744 quintillion) value image format is, I'm not going to try to represent every possible value. Further, the pixels of modern XY-plane screens can't, with the exception of varied brightness to simulate spectral phenomena, directly emulate material physical lighting properties, and so theoretically cannot display this format at native resolutions. Rather, by providing a light source and shifting into 3D space these material properties can be displayed, simulated, and/or observed even when projected onto an XY-plane.
