@@ -7,6 +7,7 @@ The premise of this speculative binary programming language is to embed rendered
 - S: Specularity (specular/glossy reflection/transmission to diffuse/scattered reflection/transmission), and
 - T: Tropism (isotropic diffusion/scattering to anisotropic diffusion/scattering). 
 
-  *NB: These material lighting properties are typically mapped in layers onto 3D meshes following the Pixar openUSD or Khronos glTF PBR pipelines. Expanding color space to include some of these features has been fun to think and write about, but represents fewer possible material variations than layered maps with properties of light represented in separate RBG color-spaces. I have no idea how this might impact the format's utility.*
+  *NB: These material lighting properties are typically mapped in layers onto 3D meshes following the Pixar openUSD or Khronos glTF PBR pipelines. Expanding color space to include some of these features has been fun to think and write about, but represents fewer possible material variations than layered maps with properties of light represented in separate RBG color-spaces.
+  I have no idea how this might impact the format's utility.*
 
 Recognizing how complex a 64-bit, 18,446,744,000,000,000,000 (18.446744 quintillion) value image format is, I'm not going to try to represent every possible value. Further, the pixels of modern XY-plane screens can't, with the exception of varied brightness to simulate spectral phenomena, directly emulate material physical lighting properties, and so theoretically cannot display this format at native resolutions. Rather, by providing a light source and shifting into 3D space these material properties can be simulated, displayed, and/or observed even when projected onto an XY-plane.
