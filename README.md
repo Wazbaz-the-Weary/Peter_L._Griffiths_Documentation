@@ -2,9 +2,9 @@
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
 The premise of this speculative binary programming language is to embed color/texture images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
-- D: Depth (of material or until transition to next material): transparent to opaque/black-body, 0-255(00000000-11111111)/00-ff
-- E/A: Emissivity/Albedo: reflective/white to absorbant/black-body, 0-255(00000000-11111111)/00-ff
-- S: Specularity: specular/glossy reflection to diffuse/scattered transmission, 0-255(00000000-11111111)/00-ff
+- D: Depth (of material or until transition to next material): opaque/black-body to transparent, 0-255(00000000-11111111)/00-ff
+- E/A: Emissivity/Albedo: absorbant/black-body to reflective/white, 0-255(00000000-11111111)/00-ff
+- S: Specularity: diffuse/scattered reflection and transmission to specular/glossy reflection and transmission, 0-255(00000000-11111111)/00-ff
 - T: Tropism: isotropic diffusion/scattering to anisotropic diffusion/scattering, 0-255(00000000-11111111)/00-ff
 
   *NB: These material lighting properties are typically mapped in layers onto 3D meshes following the Pixar openUSD or Khronos glTF PBR pipelines. Expanding color space to include some of these features has been fun to think and write about, but represents fewer possible material variations than layered maps with properties of light represented in separate RGBA color-spaces.*
