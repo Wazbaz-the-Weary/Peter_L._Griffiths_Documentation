@@ -15,8 +15,12 @@ Recognizing how complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (
 
 With the exception of varied brightness to simulate spectral phenomena in increasingly granular LCD backlighting zones or the individually addressable LED sub-pixels of more modern displays, XY-plane screens can't directly emulate physical lighting properties, and so cannot display this proposed format at native resolution and aspect ratio. Rather, by directing a light source and shifting off-axis into 3-space these material properties can be simulated, displayed, and/or observed projected onto a visual XY-plane. 
 
-For this exercise I've created a rough 4x4 texel demonstration, (re)photographed using the sun for light instead of a lamp for better contrast to amalgamate RGB values. 
-![alt text](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
+### Step 1
+
+For this exercise I've created a rough 4x4 texel demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast to amalgamate RGB values. Only the 2 glass texels display transparency, so I've not included it in this; all others retain a value of 255/opaque.
+
+Top-down:
+![Top-Down](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
 
 | RGB(A ignored) |             |             |             | Top-Down    |
 |----------------|-------------|-------------|-------------|-------------|
@@ -25,7 +29,8 @@ For this exercise I've created a rough 4x4 texel demonstration, (re)photographed
 | Fabric         | 14,12,17    | 15,13,16    | 29,28,24    | 38,36,37    |
 | Glass vs Paper | 38,36,37    | 61,47,43    | 200,200,200 | 205,205,205 |
 
-![alt text](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190306477.RAW-01.COVER.jpg?raw=true)
+Tilted camera:
+![Tilted Camera](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190306477.RAW-01.COVER.jpg?raw=true)
 
 | RGB            |             |             |             | Tilted camera|
 |----------------|-------------|-------------|-------------|-------------|
@@ -34,7 +39,8 @@ For this exercise I've created a rough 4x4 texel demonstration, (re)photographed
 | Fabric         | 20,18,23    | 36,34,35    | 33,28,27    | 35,33,34    |
 | Glass vs Paper | 65,76,71    | 70,59,53    | 208,209,211 | 210,211,213 |
 
-![alt text](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190440025.RAW-01.COVER.jpg?raw=true)
+Sun incident:
+![Sun Incident](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190440025.RAW-01.COVER.jpg?raw=true)
 
 | RGB            |             |             |             | Sun incident |
 |----------------|-------------|-------------|-------------|--------------|
@@ -42,3 +48,4 @@ For this exercise I've created a rough 4x4 texel demonstration, (re)photographed
 | Oak Veneer     | 206,173,141 | 188,153,140 | 208,164,141 | 205,171,145  |
 | Fabric         | 25,27,35    | 28,29,33    | 42,43,47    | 67,71,77     |
 | Glass vs Paper | 87,94,92    | 129,124,123 | 195,206,214 | 199,210,218  |
+
