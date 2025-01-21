@@ -1,7 +1,7 @@
 # RGBADEST (and CMYKDAST)
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
-The premise of this speculative binary programming thingy is to embed color/texture images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed color/texture images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
 - D: Depth (of material or until transition to next material): opaque/black-body to transparent
 - E/A: Emissivity/Albedo: absorbant/black-body to reflective/white
 - S: Specularity: diffuse/scattered reflection and transmission to specular/glossy reflection and transmission
@@ -11,13 +11,15 @@ The premise of this speculative binary programming thingy is to embed color/text
 
   *I'm not sure this impacts utility unless this format was expressly more efficient or performant, challenging as glTF and openUSD are already more theoretically capable and are being actively refined.*
 
-Recognizing how complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (18.446744 e+19/quintillion) value image format is, I'm not even going to think about representing every possible value. HDR extended to 8x12/96-bit, for simplicity (hah!) only considering 12-bit density and not 10-bit, expands the range of values to 7.9228163 e+28, so I'm ignoring that it exists. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recognizing how complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (18.446744 e+19/quintillion) value image format is, I'm not even going to think about representing every possible value. HDR extended to 8x12/96-bit, for simplicity (hah!) only considering 12-bit density and not 10-bit, expands the range of values to 7.9228163 e+28, so I'm ignoring that it exists. 
 
-With the exception of varied brightness to simulate spectral phenomena in increasingly granular LCD backlighting zones or the individually addressable LED sub-pixels of more modern displays, XY-plane screens can't directly emulate physical lighting properties, and so cannot display this proposed format at native resolution and aspect ratio. Rather, by directing a light source and shifting off-axis into 3-space these material properties can be simulated, displayed, and/or observed projected onto a visual XY-plane. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the exception of varied brightness to simulate spectral phenomena in increasingly granular LCD backlighting zones or the individually addressable LED sub-pixels of more modern displays, XY-plane screens can't directly emulate physical lighting properties, and so cannot display this proposed format at native resolution and aspect ratio. Rather, by directing a light source and shifting off-axis into 3-space these material properties can be simulated, displayed, and/or observed projected onto a visual XY-plane. 
 
 ### Step 1
 
-For this exercise I've created a rough 4x4 texel demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast to amalgamate RGB values. Only the 2 glass texels display transparency, so I've not included it in this; all others retain a value of 255/opaque.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this exercise I've created a rough 4x4 texel demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast to amalgamate RGB values. Only the 2 glass texels display transparency, so I've not included it in this; all others retain a value of 255/opaque.
+  
+*NB: The glass in the photos is shown as close to the color of the surface below it, for accuracy I should have taken a photo of the surface under the demo and used the difference in values. I'm leaving the wood-color values from the photos in place, but note that these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Alpha increases*
 
 Top-down:
 ![Top-Down](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
