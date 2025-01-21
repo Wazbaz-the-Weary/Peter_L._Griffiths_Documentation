@@ -2,10 +2,10 @@
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed color/texture images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
-- D: Depth (of material or until transition to next material): opaque/black-body to transparent
-- E/A: Emissivity/Albedo: absorbant/black-body to reflective/white
-- S: Specularity: diffuse/scattered reflection and transmission to specular/glossy reflection and transmission
-- T: Tropism: isotropic diffusion/scattering to anisotropic diffusion/scattering
+- D: Depth (of material or until transition to next material): opaque/black-body to none/transparent              mapped: 0-255 black to white
+- E/A: Emissivity/Albedo: absorbant/black-body to reflective/white                                                mapped: 0-255 black to white
+- S: Specularity: diffuse/scattered reflection and transmission to specular/glossy reflection and transmission    mapped: 0-255 black to white
+- T: Tropism: anisotropy diffusion/scattering scale from -1 strong forward to 0 isotropic to +1 strong backward   mapped: 0-255 black to white, anisotropic forward 0-127, 128-255 anisotropic backward
   
 *NB: These material lighting properties are typically mapped in layers onto 3D meshes following the Pixar openUSD or Khronos glTF PBR pipelines. Expanding color space to include some of these features has been fun to think and write about, but represents fewer possible material variations than layered maps with properties of light represented in separate RGBA color-spaces.*
 
@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this exercise I've created a rough 4x4 texel demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast to amalgamate RGB values. Only the 2 glass texels display transparency, so I've not included it in this; all others retain a value of 255/opaque.
   
-*NB: The glass in the photos is shown as close to the color of the surface below it, for accuracy I should have taken a photo of the surface under the demo and used the difference in values. I'm leaving the wood-color values from the photos in place, but note that these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Alpha increases*
+*NB: The glass in the photos reports close to the color of the surface below it. For accuracy I should have taken a photo of the surface under the demo and used the difference in values, or better yet positioned paper below them. I'm leaving the wood-color values from the photos in place, but these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Depth increases*
 
 Top-down:
 ![Top-Down](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
