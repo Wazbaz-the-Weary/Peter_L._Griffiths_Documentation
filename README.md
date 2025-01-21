@@ -15,4 +15,4 @@ Recognizing how complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (
 
 With the exception of varied brightness to simulate spectral phenomena in increasingly granular LCD backlighting zones or the individually addressable LED sub-pixels of more modern displays, XY-plane screens can't directly emulate physical lighting properties, and so cannot display this proposed format at native resolution and aspect ratio. Rather, by directing a light source and shifting into 3D space these material properties can be simulated, displayed, and/or observed even when projected onto a visual XY-plane. 
 
-![alt text](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/image.jpg?raw=true)
+![alt text](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_062508177.RAW-01.COVER.jpg?raw=true)
