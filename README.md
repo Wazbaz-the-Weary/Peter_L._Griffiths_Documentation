@@ -1,8 +1,8 @@
 # RGBADEST (and sort of CMYKDAST)
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed texel images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
-- D: Depth (of material or until transition to next material): opaque/black-body to none/transparent
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed texel images with additional per-texel physically-based lighting properties, expanding onto 4 by 8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4 8-bit spectral registers with each represented by a range from 0-255: 
+- D: Depth (of material or until transition to next material): (1 texel unit)/black-body to flat/transparent
 
   *if transparency is 255 the texel is impermeable and changes +Y Depth, with any other transparency value the texel changes -Y Depth; cannot for simplicity exceed +/-1 texel unit*
 - E/A: Emissivity/Albedo: absorbant/black-body to reflective/white
@@ -31,11 +31,11 @@ so RGBADEST is written:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this exercise I've created a rough 4x4 "texel" demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast. Only the 2 glass texels display transparency, so I've not included it in this; all others retain a value of 255/opaque. 
   
-*NB: The glass in the photos reports close to the color of the surface below it. For accuracy I should have taken a photo of the surface under the demo and used the difference in values, or better yet positioned paper below them. I'm leaving the wood-color values from the photos in place, but these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Depth increases*
+*NB: The glass in the photos reports close to the color of the surface below it. For accuracy I should have taken a photo of the surface under the demo and used the difference in values, or better yet positioned paper below them. I'm leaving the wood-color values from the photos in place, but these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Depth increases.*
 
 ### Step 1
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consider how the below 4x4 texel grids' DEST values are exhibited though their changing RGB values in the photos.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consider how the below 4x4 texel grids' DEST values are exhibited though their changing RGB values in the photos. Select from the tables, average, or approximate RGBA values for the 16 texel materials to get closest to how you think the material is colored.
 
 Top-down:
 ![Top-Down](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
@@ -69,4 +69,4 @@ Sun incident:
 
 ### Step 2
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select a texel and approximate its complete RGBADEST value; for this exercise there are no wrong answers, just variably accurate guesses.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Referencing the above pictures and your RGBA values from step 1, approximate the texels' DEST values; for this exercise there are no right or wrong answers, just estimates.
