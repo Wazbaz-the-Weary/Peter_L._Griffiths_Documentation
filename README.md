@@ -35,7 +35,7 @@ so RGBADEST is written:
 
 ### Step 1
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please consider how these texel DEST values are only exhibited though their changing RGB values in multiple photos.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consider how the below 4x4 texel grids' DEST values are exhibited though their changing RGB values in the photos.
 
 Top-down:
 ![Top-Down](https://github.com/Wazbaz-the-Weary/Peter_L._Griffiths_Documentation/blob/main/PXL_20250121_190302056.RAW-01.COVER.jpg?raw=true)
