@@ -31,6 +31,10 @@ so RGBADEST is written:
   
 *NB: The glass in the photos reports close to the color of the surface below it. For accuracy I should have taken a photo of the surface under the demo and used the difference in values, or better yet positioned paper below them. I'm leaving the wood-color values from the photos in place, but these soda-glass slides are just a little green and should be assumed to approach a color value of (167,199,203) as Depth increases.*
 
+## Binary Programming Interface
+
+    Each
+
 ## Challenge
 
 ### Step 1
@@ -70,3 +74,7 @@ Sun incident:
 ### Step 2
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Referencing the above pictures and your RGBA values from step 1, approximate the texels' DEST values; for this exercise there are no right or wrong answers, just estimates.
+
+### Step 3
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organize the four texels in your preferred 
