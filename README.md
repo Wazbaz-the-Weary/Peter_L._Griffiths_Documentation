@@ -21,11 +21,11 @@ The 8-bit RGBA spectrum represented as binary is written:
 
  (00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111),
 
-so RGBADEST is written:
+so binary RGBADEST is written:
 
  (00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111, 00000000-11111111)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recognizing how needlessly complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (18.446744 e+19/quintillion) value image format is, especially as none of that was never in the scope of this assignement, I'm not even going to think about representing every possible value. HDR extended to 8x12/96-bit, for simplicity (hah!) only considering 12-bit density and not 10-bit, expands the range of values to 7.9228163 e+28, so I'm ignoring that it exists. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recognizing how needlessly complex an extended SDR 8x8/64-bit, 18,446,744,000,000,000,000 (18.446744 e+19/quintillion) value image format is, especially as none of that was ever in the scope of this assignement, I'm not even going to think about representing every possible value. HDR extended to 8x12/96-bit, for simplicity (hah!) only considering 12-bit density and not 10-bit, expands the range of values to 7.9228163 e+28, so I'm ignoring that it exists. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the exception of varied brightness to simulate spectral phenomena in increasingly granular LCD backlighting zones or the individually addressable LED sub-pixels of more modern displays, XY-plane screens can't directly emulate physical lighting properties, and so cannot natively display this proposed format. Rather, by directing a light source and shifting off-axis into 3-space these material properties can be simulated, displayed, and/or observed projected onto a visual XY-plane. For this exercise I've created a rough 4x4 "texel" demonstration, (re)photographed 3 times using the sun for light instead of a lamp for better contrast. Only the 2 glass texels display transparency, so I've not included it in the tables; all others retain a value of 255/opaque. 
   
@@ -33,7 +33,13 @@ so RGBADEST is written:
 
 ## Binary Programming Interface
 
-    Each
+    This interface is designed to print RGBADEST texels. Each texel is printed line by line left to right, top to bottom, using 8 8-bit values separated by 1-bit, 0 to continue one texel unit to the right on the same horizontal row and 1 to move back to the left-most grid-side and down one texel unit, starting a new row.
+    
+    00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 - One RGBADEST texel
+    0 - right one unit
+    1 - start new row
+
+    Example: 00010110 10100010 01110100 00001001 00101100 01111000 01010101 10101010 0 00101001 01001011 00000100 01000010 01010010 10000010 01001001 00100100 1 00100101 00000010 11111011 01000010 01000001 01100000 00000010 10011111 0 01100010 10010111 00010100 00100000 01011101 11110110 10100110 00001100  -  prints a 2x2, 4 texel square
 
 ## Challenge
 
@@ -77,4 +83,4 @@ Sun incident:
 
 ### Step 3
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organize the four texels in your preferred 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organize the four texels in your preferred array
