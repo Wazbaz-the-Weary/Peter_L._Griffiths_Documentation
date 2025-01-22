@@ -1,4 +1,4 @@
-# RGBADEST (and CMYKDAST)
+# RGBADEST (and sort of CMYKDAST)
 ## [Assignment 1 - Build your own binary (byob)](https://github.com/charlieroberts/imgd-5010-s24/blob/main/assignment1-binary.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed texel images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
