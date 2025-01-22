@@ -33,13 +33,14 @@ so binary RGBADEST is written:
 
 ## Binary Programming Interface
 
-    This interface is designed to print RGBADEST texels. Each texel is printed line by line left to right, top to bottom, using 8 8-bit values separated by 1-bit, 0 to continue one texel unit to the right on the same horizontal row and 1 to move back to the left-most grid-side and down one texel unit, starting a new row.
+    This interface is designed to print RGBADEST texels. Each texel is printed line by line left to right, top to bottom, using 8 8-bit values separated by 1-bit.
+    0 shifts one texel unit to the right on the same horizontal row, and 1 moves back to the left-most grid-side and down one texel unit, starting a new row.
     
     00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 00000000-11111111 - One RGBADEST texel
     0 - right one unit
     1 - start new row
 
-    Example: 00010110 10100010 01110100 00001001 00101100 01111000 01010101 10101010 0 00101001 01001011 00000100 01000010 01010010 10000010 01001001 00100100 1 00100101 00000010 11111011 01000010 01000001 01100000 00000010 10011111 0 01100010 10010111 00010100 00100000 01011101 11110110 10100110 00001100  -  prints a 2x2, 4 texel square
+    Example: Prints a 2x2, 4 texel square - 00010110 10100010 01110100 00001001 00101100 01111000 01010101 10101010 0 00101001 01001011 00000100 01000010 01010010 10000010 01001001 00100100 1 00100101 00000010 11111011 01000010 01000001 01100000 00000010 10011111 0 01100010 10010111 00010100 00100000 01011101 11110110 10100110 00001100
 
 ## Challenge
 
@@ -83,4 +84,4 @@ Sun incident:
 
 ### Step 3
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organize the four texels in your preferred array
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organize the four texels in your preferred array and convert to binary using the programming interface above.
