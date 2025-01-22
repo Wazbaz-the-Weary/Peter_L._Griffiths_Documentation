@@ -4,7 +4,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The premise of this speculative binary programming thingy is to embed texel images with additional per-texel physically-based lighting properties, expanding onto 4x8-bit/32-bit RGBA/CMYK color with DEST/DAST, an additional 4x8-bit/32-bit spectral register: 
 - D: Depth (of material or until transition to next material): opaque/black-body to none/transparent
 
-  *if transparency is 255 the texel is impermeable and changes +Y Depth, with any other transparency value the texel changes -Y Depth; cannot for simplicity exceed +/-1 texel width*
+  *if transparency is 255 the texel is impermeable and changes +Y Depth, with any other transparency value the texel changes -Y Depth; cannot for simplicity exceed +/-1 texel unit*
 - E/A: Emissivity/Albedo: absorbant/black-body to reflective/white
 
 - S: Specularity: diffuse/scattered reflection and transmission to specular/glossy reflection and transmission
